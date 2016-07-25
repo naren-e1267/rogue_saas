@@ -38,7 +38,7 @@ $(document).ready(function () {
         //token from response
         var token = response.id;
         
-        alert(token);
+        // alert(token);
         
         //add above token to the form
         f.append('<input type="hidden" name="user[stripe_card_token]" value="'+token+'"/>');
