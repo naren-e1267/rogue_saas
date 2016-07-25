@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-    Stripe.setPublicKey($('meta[name="stripe-key"]').attr("content"));
+    Stripe.setPublishableKey($('meta[name="stripe-key"]').attr("content"));
     
     $('#form-submit-btn').click(function(event){
         event.preventDefault();
@@ -26,7 +26,7 @@ $(document).ready(function () {
     function stripeResponseHandler(status,response) {
         //reference the form
         // var f = $("#new_user");
-        console.log(response.error.message);
+        //console.log(response.error.message);
         var f = $('#payment-form');
 
     if (response.error) {
