@@ -1,1 +1,44 @@
-profile form goes here.. generic form for every user 
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h1>Your profile &mdash; Tell us more</h1>
+        <p>shows a basic info about you. fill this out so other users can look you up easily.</p>
+        <div class="well">
+            <%= form_for @profile, url:user_profile_path do |f| %>
+                <div class="form-group">
+                    <%= f.label :first_name %>
+                    <%= f.text_field :first_name, class: "form-control" %>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label :last_name %>
+                    <%= f.text_field :last_name, class: "form-control" %>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label :title %>
+                    <%= f.select :title, ['-','Mr.','Miss.','Mrs.','Dr.'], {}, class: "form-control" %>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label :phone_number %>
+                    <%= f.text_field :phone_number, class: "form-control" %>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label :contact_email %>
+                    <%= f.text_field :contact_email, class: "form-control" %>
+                </div>
+                
+                <div class="form-group">
+                    <%= f.label :description %>
+                    <%= f.text_area :description, class: "form-control" %>
+                </div>
+                
+                <div class="action-group">
+                    <%= f.submit "Update Profile", class: "btn btn-primary" %>
+                </div>
+                    
+            <% end %>
+        </div>
+    </div>
+</div>
