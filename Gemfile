@@ -45,6 +45,8 @@ gem 'stripe', '~>1.16.1'
 
 gem 'figaro', '~>1.0.0'
 
+gem 'paperclip', '~>4.2.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
