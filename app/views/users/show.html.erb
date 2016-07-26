@@ -1,4 +1,4 @@
-
+<%= image_tag @user.profile.avatar.url %>
 <%= @user.profile.title %><%= @user.profile.first_name %> <%= @user.profile.last_name %><br>
 <% if current_user.plan_id == 2 %>
 <%= @user.profile.phone_number %><br>
