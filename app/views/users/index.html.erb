@@ -13,8 +13,11 @@
                     </div>
                     <div>
                         <%= link_to tmp do %> 
-                        <h2><%= tmp.profile.title %> <%= tmp.profile.first_name %> <%= tmp.profile.last_name %></h2>
+                        <h2 class="index-h2-link"><%= tmp.profile.title %> <%= tmp.profile.first_name %> <%= tmp.profile.last_name %></h2>   
                         <% end %>
+                        <% if tmp.plan_id == 2 %>
+                            <span class="label label-danger">PRO</span>
+                        <% end %> 
                         <p> <%= tmp.profile.description %></p>
                     </div>
                     
